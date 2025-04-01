@@ -25,7 +25,7 @@ export type Page = {
 export type Post = {
     __id: string;
     __url: string;
-    type: 'P';
+    type: 'Post';
     title: string;
     sections?: Section[];
     body?: string;
