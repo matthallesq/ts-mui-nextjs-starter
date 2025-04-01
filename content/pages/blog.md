@@ -23,6 +23,6 @@ sections:
         color: primary
     image:
       type: Image
-      url: 'https://assets.stackbit.com/components/images/default/default-image.png'
+      url: /images/pic03.webp
       altText: Image alt text
 ---
