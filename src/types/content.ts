@@ -1,5 +1,5 @@
-export type Document = Config | Page;
-export type DocumentTypeNames = 'Config' | 'Page';
+export type Document = Config | Page | Post;
+export type DocumentTypeNames = 'Config' | 'Page'| 'Post';
 
 export type Section = CardsSection | HeroSection;
 
@@ -17,6 +17,15 @@ export type Page = {
     __id: string;
     __url: string;
     type: 'Page';
+    title: string;
+    sections?: Section[];
+    body?: string;
+};
+
+export type Post = {
+    __id: string;
+    __url: string;
+    type: 'P';
     title: string;
     sections?: Section[];
     body?: string;
