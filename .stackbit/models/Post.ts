@@ -1,7 +1,7 @@
 import { Model } from '@stackbit/types';
 
 export const Post: Model = {
-    type: 'post',
+    type: 'object',
     name: 'Post',
     label: 'Post',
     urlPath: '/{slug}',
