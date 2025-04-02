@@ -38,7 +38,7 @@ contentSources: [
           urlPath: "/{slug}",
           filePath: "content/pages/{slug}.json",
           fields: [{ name: "title", type: "string", required: true }]
-        }
+        },
 
         {
           name: "Post",
