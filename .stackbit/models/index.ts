@@ -8,6 +8,8 @@ import { HeroSection } from './HeroSection';
 import { Image } from './Image';
 import { Link } from './Link';
 import { Page } from './Page';
+import { Post } from './Post';
+
 import { ThemeStyle } from './ThemeStyle';
 
 export const allModels = {
@@ -21,5 +23,6 @@ export const allModels = {
     Image, 
     Link, 
     Page, 
+    Post,
     ThemeStyle, 
 };
