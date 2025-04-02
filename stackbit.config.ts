@@ -26,5 +26,31 @@ export const sbConfig = defineStackbitConfig({
     styleObjectModelName: 'ThemeStyle'
 });
 
+contentSources: [
+    new GitContentSource({
+      rootPath: __dirname,
+      contentDirs: ["content"],
+      models: [
+        {
+          name: "Page",
+          // Define the model as a page model
+          type: "page",
+          urlPath: "/{slug}",
+          filePath: "content/pages/{slug}.json",
+          fields: [{ name: "title", type: "string", required: true }]
+        }
+
+        {
+          name: "Post",
+          // Define the model as a post model
+          type: "page",
+          urlPath: "/{slug}",
+          filePath: "content/posts/{slug}.json",
+          fields: [{ name: "title", type: "string", required: true }]
+        }
+      ],
+    })
+  ]
+
 export default sbConfig;
 
