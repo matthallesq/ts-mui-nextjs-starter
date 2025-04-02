@@ -4,29 +4,15 @@ export const Post: Model = {
     type: 'object',
     name: 'Post',
     label: 'Post',
-    urlPath: '/{slug}',
-    filePath: 'content/posts/{slug}.md',
-    hideContent: true,
-    thumbnail: 'https://assets.stackbit.com/components/models/thumbnails/default.png',
+    labelField: 'title',
     fields: [
-        { type: 'string', name: 'title', label: 'Title', default: 'This Is a New Post', required: true },
+        { type: 'string', name: 'title', label: 'Title', default: 'Item Title' },
         {
-            type: 'list',
-            name: 'sections',
-            label: 'Sections',
-            items: { type: 'model', models: [], groups: ['sectionComponent'] },
-            default: [
-                {
-                    type: 'HeroSection',
-                    title: 'This Is A Big Hero Headline',
-                    text: 'Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl. Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat itae interdum. Ut nec massa eget lorem blandit condimentum et at risus.\n',
-                    actions: [
-                        { type: 'Button', label: 'Get Started', url: '/', size: 'large', variant: 'contained' },
-                        { type: 'Button', label: 'Learn more', url: '/', size: 'large', variant: 'outlined' }
-                    ],
-                    image: { type: 'Image', url: 'https://assets.stackbit.com/components/images/default/hero.png', altText: 'Hero section image' }
-                }
-            ]
+            type: 'markdown',
+            name: 'text',
+            label: 'Text',
+            default:
+                'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.'
         }
     ]
 };
