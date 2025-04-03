@@ -1,6 +1,6 @@
 ---
 title: Post
-type: Post
+type: Page
 sections:
   - type: HeroSection
     title: Example for H2 headline
