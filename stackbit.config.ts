@@ -26,6 +26,11 @@ export const sbConfig = defineStackbitConfig({
     styleObjectModelName: 'ThemeStyle'
 });
 
+   modelExtensions: [
+     // Extend the "page" and "post" models by defining them as page models
+     { name: "post", type: "page" }
+   ]
+
 contentSources: [
     new GitContentSource({
       rootPath: __dirname,
